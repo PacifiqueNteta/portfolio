@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0H7MX7FSZ4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-0H7MX7FSZ4');
+	</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Projects | Pacifique Nteta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                    <span class="text-blue-800 font-bold text-xl">PN</span>
+                </div>
+                <span class="text-xl font-semibold"></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Featured Projects</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#education" class="nav-link">Education</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="pt-32 pb-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Projects</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">A comprehensive collection of my work in industrial engineering and data analytics</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">
+                    All Projects
+                </button>
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="analytics">
+                    Data Analytics
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="visualization">
+                    Data Visualization
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="machine-learning">
+                    Machine Learning
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Project 1 (from main page) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics visualization">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <img src="images/Car Sales Dashboard.png" alt="Automotive Sales Analytics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Automotive Car Sales Analytics</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Analyzed 2 years of automotive sales data to identify revenue trends, patterns in customer preferences, and built an interactive Power BI dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                        </div>
+                        <a href="https://github.com/PacifiqueNteta/Automotive-Sales-Analytics" class="text-blue-600 font-medium hover:text-blue-800 transition">View Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Featured Project 2 (from main page) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics visualization">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="images/Bank Statement Analysis.jpeg" alt="Financial-Data-Analytics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Financial-Data-Analytics: Personal Bank Statement Deep Dive</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Developed a comprehensive dashboard to track personal income and expenses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-orange-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-orange-100 text-yellow-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                        </div>
+                       <a href="https://github.com/PacifiqueNteta/Financial-Data-Analytics/blob/main/README.md" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Featured Project 3 (from main page) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="machine-learning">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="images/Houses.png" alt="House-Price-Prediction-Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold mb-2">House Price Prediction</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
+                    </div>
+                        <p class="text-gray-600 mb-4">Built a machine learning model to predict house price based on given set of features such as number of bedrooms, number of bathrooms, squarefoot of basement,...</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">ML</span>
+                        </div>
+                        <a href="https://github.com/PacificNt/House-Price-Prediction-Project/blob/main/house-sales-project.ipynb" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
+                    </div>
+                </div>
+               
+                <!-- Featured Project 4 (from main page) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="machine-learning">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <img src="images/BellaBeatChart.png" alt="Bellabeat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">BELLABEAT WELLNESS TECH ANALYSIS</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Analyzed Fitbit fitness tracker data to identify smart device usage trends and develop growth strategies for Bellabeat.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">R</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Microsoft Excel</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">SQL</span>
+                        </div>
+                        <a href="https://www.kaggle.com/code/pacifiquenteta/bellabeat-capstone-case-study" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
+                    </div>
+                </div>
+
+
+                <!-- Additional Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <img src="images/Corona.png" alt="Covid-19 Data Exploratory Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Covid-19 Data Exploratory Project</h3>
+                        <p class="text-gray-600 mb-4">In this project I performed a data exploratory analysis on Covid 19 data. My analysis explored various aspects of the pandemic, including global and South African case counts, deaths, infection rates, and the dates of the first recorded cases and deaths.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Microsoft Excel</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Power Query(Excel)</span>
+                            <span class="bg-orange-100 text-yellow-800 text-xs px-3 py-1 rounded-full">SQL Server</span>
+                        </div>
+                        <a href="https://github.com/PacificNt/Covid-19_Data_Exploratory_Project/blob/main/README.md" target="_blank" rel="noreferrer noopener" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
+                    </div>
+                </div>
+
+
+                <!-- Additional Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="visualization">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <img src="images/Bike sale project.png" alt="Adventure" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bike Sales Excel Project - Interactive Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Created an interactive Excel dashboard tracking supplier performance metrics and lead times across 5 regions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Pivot Table</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">ETL</span>
+                        </div>
+                        <a href="https://1drv.ms/x/s!Akip1je-1QNHhXFHYk6BNHIUwfp4?e=jDx7t6" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Dashboard →</a>
+                    </div>
+                </div>
+
+
+                <!-- Additional Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="visualization">
+                    <div class="h-48 bg-pink-100 flex items-center justify-center">
+                        <img src="images/Adventure.png" alt="Adventure" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Maven Adventure Sales Project</h3>
+                        <p class="text-gray-600 mb-4">Generated dashboards to track KPIs, compare regional performance, analyze product-level trends, and identify high-value customers</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                        </div>
+                        <a href="https://mavenanalytics.io/project/29545" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
+                    </div>
+                </div>
+        </div>
+    <!-- Back to Featured Projects -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <a href="index.html#projects" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Featured Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                            <span class="text-blue-800 font-bold">PN</span>
+                        </div>
+                        <span class="text-lg font-semibold">Pacifique Nteta</span>
+                    </div>
+                    <p class="mt-2 text-blue-100">Industrial Engineer & Data Analyst</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="index.html#home" class="hover:text-blue-200 transition">Home</a>
+                    <a href="index.html#about" class="hover:text-blue-200 transition">About</a>
+                    <a href="index.html#projects" class="hover:text-blue-200 transition">Featured Projects</a>
+                    <a href="index.html#contact" class="hover:text-blue-200 transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-blue-400 mt-6 pt-6 text-center text-blue-100">
+                <p>© 2025 Pacifique Nteta. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter projects by category
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('border', 'border-blue-600', 'text-blue-600', 'hover:bg-blue-600', 'hover:text-white');
+                    });
+                    
+                    button.classList.add('bg-blue-600', 'text-white');
+                    button.classList.remove('border', 'border-blue-600', 'text-blue-600', 'hover:bg-blue-600', 'hover:text-white');
+                    
+                    // Filter projects
+                    const filter = button.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
