@@ -64,15 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Tools carousel
+// Tools carousel
 const toolsTrack = document.getElementById('tools-track');
 const toolsPrev  = document.getElementById('tools-prev');
 const toolsNext  = document.getElementById('tools-next');
 
 if (toolsTrack) {
-    const toolsVisible = window.innerWidth <= 640 ? 2 : 4; // matches CSS
+    const toolsVisible = window.innerWidth <= 640 ? 2 : 4;
     const toolsTotal   = toolsTrack.children.length;
     const toolsMax     = toolsTotal - toolsVisible;
     let toolsCurrent   = 0;
+    let autoPlayInterval;
 
     function updateToolsCarousel() {
         const pct = (100 / toolsVisible) * toolsCurrent;
@@ -81,12 +83,34 @@ if (toolsTrack) {
         toolsNext.disabled = toolsCurrent >= toolsMax;
     }
 
+    function autoSlide() {
+        if (toolsCurrent < toolsMax) {
+            toolsCurrent++;
+        } else {
+            toolsCurrent = 0; // Loop back to start
+        }
+        updateToolsCarousel();
+    }
+
+    // Start auto-play (1500ms = every 1.5 seconds)
+    autoPlayInterval = setInterval(autoSlide, 2000);
+
     toolsPrev.addEventListener('click', () => {
-        if (toolsCurrent > 0) { toolsCurrent--; updateToolsCarousel(); }
+        if (toolsCurrent > 0) { 
+            toolsCurrent--; 
+            updateToolsCarousel();
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(autoSlide, 2000);
+        }
     });
 
     toolsNext.addEventListener('click', () => {
-        if (toolsCurrent < toolsMax) { toolsCurrent++; updateToolsCarousel(); }
+        if (toolsCurrent < toolsMax) { 
+            toolsCurrent++; 
+            updateToolsCarousel();
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(autoSlide, 2000);
+        }
     });
 
     updateToolsCarousel();
