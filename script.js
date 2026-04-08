@@ -63,3 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Tools carousel
+const toolsTrack = document.getElementById('tools-track');
+const toolsPrev  = document.getElementById('tools-prev');
+const toolsNext  = document.getElementById('tools-next');
+
+if (toolsTrack) {
+    const toolsVisible = window.innerWidth <= 640 ? 2 : 4; // matches CSS
+    const toolsTotal   = toolsTrack.children.length;
+    const toolsMax     = toolsTotal - toolsVisible;
+    let toolsCurrent   = 0;
+
+    function updateToolsCarousel() {
+        const pct = (100 / toolsVisible) * toolsCurrent;
+        toolsTrack.style.transform = `translateX(-${pct}%)`;
+        toolsPrev.disabled = toolsCurrent === 0;
+        toolsNext.disabled = toolsCurrent >= toolsMax;
+    }
+
+    toolsPrev.addEventListener('click', () => {
+        if (toolsCurrent > 0) { toolsCurrent--; updateToolsCarousel(); }
+    });
+
+    toolsNext.addEventListener('click', () => {
+        if (toolsCurrent < toolsMax) { toolsCurrent++; updateToolsCarousel(); }
+    });
+
+    updateToolsCarousel();
+}

@@ -152,3 +152,84 @@
         html {
             scroll-behavior: smooth;
         }
+
+/* Tools Carousel */
+.tools-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tools-btn {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.tools-btn:hover {
+    background: #eff6ff;
+    border-color: #1e40af;
+    color: #1e40af;
+}
+
+.tools-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.tools-viewport {
+    flex: 1;
+    overflow: hidden;
+}
+
+.tools-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Each slide takes 1/4 of the viewport — shows 4 tools at a time */
+/* Change 25% to 33.33% for 3, or 20% for 5 */
+.tools-slide {
+    flex: 0 0 25%;
+    padding: 0 8px;
+}
+
+.tools-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    cursor: default;
+}
+
+.tools-item:hover {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.tools-item span {
+    font-size: 14px;
+    color: #374151;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    /* Show 2 tools at a time on mobile */
+    .tools-slide {
+        flex: 0 0 50%;
+    }
+}
