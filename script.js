@@ -93,14 +93,14 @@ if (toolsTrack) {
     }
 
     // Start auto-play (1500ms = every 1.5 seconds)
-    autoPlayInterval = setInterval(autoSlide, 2000);
+    autoPlayInterval = setInterval(autoSlide, 3000);
 
     toolsPrev.addEventListener('click', () => {
         if (toolsCurrent > 0) { 
             toolsCurrent--; 
             updateToolsCarousel();
             clearInterval(autoPlayInterval);
-            autoPlayInterval = setInterval(autoSlide, 2000);
+            autoPlayInterval = setInterval(autoSlide, 3000);
         }
     });
 
@@ -109,7 +109,7 @@ if (toolsTrack) {
             toolsCurrent++; 
             updateToolsCarousel();
             clearInterval(autoPlayInterval);
-            autoPlayInterval = setInterval(autoSlide, 2000);
+            autoPlayInterval = setInterval(autoSlide, 3000);
         }
     });
 
