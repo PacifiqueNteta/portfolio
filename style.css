@@ -44,9 +44,26 @@
 /* home section styling */
 .home {
     display: flex;
-    background: #2a2a2a;
+    background: #0f172a;
     min-height: 100vh;
-    padding-top: 80px; /* Adjust based on your navigation height */
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+ 
+#hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+ 
+/* Ensure your existing .home content sits above the canvas */
+.home > *:not(#hero-bg) {
+    position: relative;
+    z-index: 1;
 }
 
 .home .home-content {
