@@ -148,10 +148,10 @@ if (toolsTrack) {
         () => 'p' + [50, 75, 90, 95, 99][Math.random() * 5 | 0],
         () => (Math.random() * 9.9 + 0.1).toFixed(2) + 'k',
         () => ['200', '201', '204', '304', '4xx'][Math.random() * 5 | 0],
-        () => ['ETL', 'SQL', 'API', 'CDC', 'MQ', 'RPC'][Math.random() * 6 | 0],
+        () => ['ETL', 'SQL', 'API', 'NULL', 'TRUE', 'FALSE', 'x'][Math.random() * 7 | 0],
         () => (Math.random() * 1.5 + 0.1).toFixed(3),
         () => (Math.random() * 3 + 0.1).toFixed(1) + 'M',
-        () => ['OK', 'WARN', 'INFO', 'PASS'][Math.random() * 4 | 0],
+        () => ['OK', 'WARN', 'INFO', 'PASS', 'FAIL', 'ERROR'][Math.random() * 6 | 0],
     ];
  
     function randMetric() {
