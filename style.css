@@ -250,3 +250,14 @@
         flex: 0 0 50%;
     }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card img {
+    max-height: 300px;
+    object-fit: cover;
+}

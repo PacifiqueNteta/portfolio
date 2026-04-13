@@ -138,7 +138,7 @@ if (toolsTrack) {
     const GRID = 44;
  
     /* ── Falling data streams ── */
-    const COL_COUNT = 14;
+    const COL_COUNT = 8;
     let streamCols = [];
  
     const METRICS = [
@@ -173,7 +173,7 @@ if (toolsTrack) {
     function rebuildLayout() {
         streamCols = Array.from({ length: COL_COUNT }, (_, i) => ({
             x: (i / COL_COUNT) * vw() * 1.05 + (Math.random() - 0.5) * 16,
-            items: Array.from({ length: 20 }, () => ({
+            items: Array.from({ length: 10 }, () => ({
                 y: Math.random() * -900,
                 speed: 0.28 + Math.random() * 0.45,
                 val: randMetric(),
@@ -290,3 +290,14 @@ if (toolsTrack) {
     window.addEventListener('resize', resize);
     requestAnimationFrame(frame);
 })();
+
+const observer = new IntersectionObserver(entries => {
+    entries[0].isIntersecting ? requestAnimationFrame(frame) : cancelAnimationFrame(raf);
+}, { threshold: 0 });
+observer.observe(cv);
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 150);
+});
