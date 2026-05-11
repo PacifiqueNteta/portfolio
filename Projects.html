@@ -301,6 +301,41 @@
             });
         });
     </script>
+
+    <script>
+      // Track all "View Project" link clicks
+      document.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', function() {
+          gtag('event', 'project_click', {
+            project_name: this.closest('.project-card')
+                            ?.querySelector('h3')?.innerText || 'unknown',
+            destination: this.href
+          });
+        });
+      });
+
+      // Track filter button usage
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          gtag('event', 'filter_used', {
+            filter_category: this.getAttribute('data-filter')
+          });
+        });
+      });
+
+      // Track scroll depth (25%, 50%, 75%, 90%)
+      const depths = [25, 50, 75, 90];
+      const fired = new Set();
+      window.addEventListener('scroll', () => {
+        const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        depths.forEach(d => {
+          if (pct >= d && !fired.has(d)) {
+            fired.add(d);
+            gtag('event', 'scroll_depth', { depth_percentage: d });
+          }
+        });
+      });
+    </script>
 </body>
 </html>
 
