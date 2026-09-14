@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0H7MX7FSZ4"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -9,267 +10,261 @@
 	  gtag('config', 'G-0H7MX7FSZ4');
 	</script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacifique Nteta | Projects</title>
-    <meta name="description" content="Portfolio of Pacifique Nteta – Bridging industrial engineering and data analytics to optimize operations, improve supply chains, and drive data-driven decisions.">
-    <meta name="keywords" content="industrial engineer, data analyst, Power BI, Python, supply chain analytics, inventory optimization, predictive modeling, data visualization, process improvement, Lean Six Sigma">
-    <meta name="author" content="Pacifique Nteta">
-    <meta name="robots" content="index, follow">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href = "images/Round Logo 1.svg" rel="icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Projects | Pacifique Nteta</title>
+<meta name="description" content="A comprehensive collection of Pacifique Nteta's work in data engineering, business intelligence and industrial analytics.">
+<meta name="keywords" content="industrial engineer, data analyst, Power BI, Python, supply chain analytics, inventory optimization, predictive modeling, data visualization, process improvement, Lean Six Sigma">
+<meta name="author" content="Pacifique Nteta">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/images/PN - Round Logo.svg Logo.svg" type="image/svg+xml">
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
-    <!-- Navigation -->
-    <nav class="gradient-bg text-white shadow-lg fixed w-full z-10">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                    <span class="text-blue-800 font-bold text-xl">PN</span>
-                </div>
-                <span class="text-xl font-semibold"></span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#about" class="nav-link">About Me</a>
-                <a href="index.html#skills" class="nav-link">Skills</a>
-                <a href="index.html#projects" class="nav-link">Featured Projects</a>
-                <a href="index.html#experience" class="nav-link">Experience</a>
-                <a href="index.html#education" class="nav-link">Education</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div id="preloader" aria-hidden="true">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header solid" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html#home" class="logo">P<span>N</span></a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="index.html#home" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="index.html#about" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="index.html#services" class="nav-link" data-nav="services">What I Offer</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <!-- <li><a href="index.html#pricing" class="nav-link" data-nav="pricing">Pricing</a></li> -->
+        <li><a href="index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
     </nav>
 
-    <!-- Projects Header -->
-    <section class="pt-32 pb-16 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Projects</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">A comprehensive collection of my work in industrial engineering and data analytics</p>
-        </div>
-    </section>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <!-- Projects Filter -->
-    <section class="py-8 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button class="filter-btn px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">
-                    All Projects
-                </button>
-                </button>
-                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="analytics">
-                    Data Analytics
-                </button>
-                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="visualization">
-                    Data Visualization
-                </button>
-                <button class="filter-btn px-4 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition" data-filter="machine-learning">
-                    Machine Learning
-                </button>
+<main>
+
+  <!-- ===================== PAGE HEADER ===================== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>All Projects</h1>
+      <p>A comprehensive collection of my work in data engineering, business intelligence and industrial analytics.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FILTER BAR ===================== -->
+  <div class="filter-bar" id="projectFilters">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+    <button class="filter-btn" data-filter="data-analytics">Data Analytics</button>
+    <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+  </div>
+
+  <!-- ===================== ALL PROJECTS GRID ===================== -->
+  <section class="all-projects">
+    <div class="container">
+      <div class="portfolio-grid" id="allProjectsGrid">
+        
+        <article class="portfolio-item" data-reveal data-category="data-engineering">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/DriveZa_Architecture.png" alt="DriveZA Holdings data platform architecture preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>DriveZA Holdings – Fabric Medallion Data Platform</h3>
+            <p>Built an end-to-end Microsoft Fabric data platform for a fictional vehicle-rental company, unifying CRM, fleet, HR and branch data from SQL Server, Snowflake and GitHub-hosted files into a governed Bronze/Silver/Gold medallion architecture with a Kimball star schema for reporting.</p>
+            <div class="tag-list">
+              <span class="tag">Microsoft Fabric</span><span class="tag">PySpark</span><span class="tag">Delta Lake</span><span class="tag">SQL Server</span><span class="tag">Snowflake</span>
             </div>
-        </div>
-    </section>
+            <a href="https://github.com/PacifiqueNteta/DriveZA-Holdings" target="_blank" rel="noopener" class="read-more">View Project <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
 
-    <!-- All Projects Grid -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                 <!-- Featured Project 2 (from main page) -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics visualization">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <img src="images/Inventory Project Header.png" alt="Inventory Control Dashboard" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Inventory Control Dashboard</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Developed an intelligent inventory management system tracking stock levels, turnover ratios, and reorder points with interactive Power BI visualizations to optimize inventory control.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Excel</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power Query</span>
-                        </div>
-                        <a href="https://app.powerbi.com/reportEmbed?reportId=751450a4-29de-4bd8-9cb0-a50e545568c4&autoAuth=true&ctid=ca9a8b8c-3ea3-4799-a43e-5510398e7a3b" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Dashboard →</a>
-                    </div>
-                </div>
-                <!-- Featured Project 3 (from main page) -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics visualization">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <img src="images/Car Sales Header.png" alt="Automotive Sales Analytics" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Automotive Car Sales Analytics</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Analyzed 2 years of automotive sales data to identify revenue trends, patterns in customer preferences, and built an interactive Power BI dashboard.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Power Query</span>
-                        </div>
-                        <a href="https://github.com/PacifiqueNteta/Automotive-Sales-Analytics" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Case Study →</a>
-                    </div>
-                </div>
-                
-                <!-- Featured Project 4 (from main page) -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics visualization">
-                    <div class="h-48 bg-green-100 flex items-center justify-center">
-                        <img src="images/Bank Statement Analysis.jpeg" alt="Financial-Data-Analytics" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Financial-Data-Analytics: Personal Bank Statement Deep Dive</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Developed a comprehensive dashboard to track personal income and expenses.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Excel</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Power Query</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">SQL</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">DAX</span>
-                        </div>
-                       <a href="https://github.com/PacifiqueNteta/Financial-Data-Analytics/blob/main/README.md" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
-                </div>
-
-                <!-- Featured Project 5 (from main page) -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="machine-learning">
-                    <div class="h-48 bg-purple-100 flex items-center justify-center">
-                        <img src="images/Houses.png" alt="House-Price-Prediction-Project" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold mb-2">House Price Prediction</h3>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
-                    </div>
-                        <p class="text-gray-600 mb-4">Built a machine learning model to predict house price based on given set of features such as number of bedrooms, number of bathrooms, squarefoot of basement,...</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Scikit-learn</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">ML</span>
-                        </div>
-                        <a href="https://github.com/PacificNt/House-Price-Prediction-Project/blob/main/house-sales-project.ipynb" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
-                </div>
-               
-                <!-- Featured Project 6 (from main page) -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics">
-                    <div class="h-48 bg-purple-100 flex items-center justify-center">
-                        <img src="images/BellaBeatChart.png" alt="Bellabeat" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">BELLABEAT WELLNESS TECH ANALYSIS</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Featured</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Analyzed Fitbit fitness tracker data to identify smart device usage trends and develop growth strategies for Bellabeat.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">R</span>
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Microsoft Excel</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power Query</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">SQL</span>
-                        </div>
-                        <a href="https://www.kaggle.com/code/pacifiquenteta/bellabeat-capstone-case-study" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
-                </div>
-
-
-                <!-- Additional Project 1 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="analytics">
-                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
-                        <img src="images/Corona.png" alt="Covid-19 Data Exploratory Project" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Covid-19 Data Exploratory Project</h3>
-                        <p class="text-gray-600 mb-4">In this project I performed a data exploratory analysis on Covid 19 data. My analysis explored various aspects of the pandemic, including global and South African case counts, deaths, infection rates, and the dates of the first recorded cases and deaths.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Microsoft Excel</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Power Query(Excel)</span>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">SQL Server</span>
-                        </div>
-                        <a href="https://github.com/PacificNt/Covid-19_Data_Exploratory_Project/blob/main/README.md" target="_blank" rel="noreferrer noopener" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
-                </div>
-
-
-                <!-- Additional Project 2 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="visualization">
-                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
-                        <img src="images/Bike sale project.png" alt="Adventure" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Bike Sales Excel Project - Interactive Dashboard</h3>
-                        <p class="text-gray-600 mb-4">Created an interactive Excel dashboard tracking supplier performance metrics and lead times across 5 regions.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Excel</span>
-                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Pivot Table</span>
-                        </div>
-                        <a href="https://1drv.ms/x/s!Akip1je-1QNHhXFHYk6BNHIUwfp4?e=jDx7t6" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition">View Dashboard →</a>
-                    </div>
-                </div>
-
-
-                <!-- Additional Project 3 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300" data-category="visualization">
-                    <div class="h-48 bg-pink-100 flex items-center justify-center">
-                        <img src="images/Adventure Preview.png" alt="Adventure" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Maven Adventure Sales Project</h3>
-                        <p class="text-gray-600 mb-4">Generated dashboards to track KPIs, compare regional performance, analyze product-level trends, and identify high-value customers</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Power Query</span>
-                        </div>
-                        <a href="https://app.powerbi.com/view?r=eyJrIjoiNzM2NTM2NjktODMyYS00ZTg4LWJiZTgtMGU3NTUxNTg4MDBhIiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9" class="text-blue-600 font-medium hover:text-blue-800 transition">View Dashboard →</a>
-                    </div>
-                </div>
-        </div>
-    <!-- Back to Featured Projects -->
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <a href="index.html#projects" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
-                <i class="fas fa-arrow-left mr-2"></i> Back to Featured Projects
-            </a>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="gradient-bg text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                            <span class="text-blue-800 font-bold">PN</span>
-                        </div>
-                        <span class="text-lg font-semibold">Pacifique Nteta</span>
-                    </div>
-                    <p class="mt-2 text-blue-100">Data Engineer & Analyst</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="index.html#home" class="hover:text-blue-200 transition">Home</a>
-                    <a href="index.html#about" class="hover:text-blue-200 transition">About Me</a>
-                    <a href="index.html#projects" class="hover:text-blue-200 transition">Featured Projects</a>
-                    <a href="index.html#contact" class="hover:text-blue-200 transition">Contact</a>
-                </div>
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/Inventory Project Header.png" alt="Inventory Control Dashboard preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Inventory Control Dashboard</h3>
+            <p>Developed an intelligent inventory management system tracking stock levels, turnover ratios, and reorder points with interactive Power BI visualizations to optimize inventory control.</p>
+            <div class="tag-list">
+              <span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span>
             </div>
-            <div class="border-t border-blue-400 mt-6 pt-6 text-center text-blue-100">
-                <p>© 2026 Pacifique Nteta. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzM2NTM2NjktODMyYS00ZTg4LWJiZTgtMGU3NTUxNTg4MDBhIiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9" target="_blank" rel="noopener" class="read-more">View Dashboard <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
 
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/Car Sales Header.png" alt="Automotive Sales Analytics preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Automotive Sales Analytics</h3>
+            <p>Analyzed 2 years of automotive sales data to identify revenue trends, patterns in customer preferences, and built an interactive Power BI dashboard.</p>
+            <div class="tag-list">
+              <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span>
+            </div>
+            <a href="https://github.com/PacifiqueNteta/Automotive-Sales-Analytics" target="_blank" rel="noopener" class="read-more">View Case Study <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="data-analytics ">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/Bank Statement Analysis.jpeg" alt="Financial Data Analytics preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Financial-Data-Analytics: Personal Bank Statement Deep Dive</h3>
+            <p>Developed a comprehensive dashboard to track personal income and expenses, from raw statements to a clean, queryable data model.</p>
+            <div class="tag-list">
+              <span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span>
+            </div>
+            <a href="https://github.com/PacifiqueNteta/Financial-Data-Analytics/blob/main/README.md" target="_blank" rel="noopener" class="read-more">View Project <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="machine-learning">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/Houses.png" alt="House Price Prediction preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>House Price Prediction</h3>
+            <p>Built a machine learning model to predict house price based on a given set of features such as number of bedrooms, bathrooms and basement square footage.</p>
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">ML</span>
+            </div>
+            <a href="https://github.com/PacificNt/House-Price-Prediction-Project/blob/main/house-sales-project.ipynb" target="_blank" rel="noopener" class="read-more">View Project <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <span class="featured-badge">Featured</span>
+            <img src="assets/images/BellaBeatChart.png" alt="Bellabeat Wellness Tech Analysis preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Bellabeat Wellness Tech Analysis</h3>
+            <p>Analyzed Fitbit fitness tracker data to identify smart device usage trends and develop growth strategies for Bellabeat.</p>
+            <div class="tag-list">
+              <span class="tag">R</span><span class="tag">Microsoft Excel</span><span class="tag">Power Query</span><span class="tag">SQL</span>
+            </div>
+            <a href="https://www.kaggle.com/code/pacifiquenteta/bellabeat-capstone-case-study" target="_blank" rel="noopener" class="read-more">View Project <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <img src="assets/images/Corona.png" alt="Covid-19 Data Exploratory Project preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Covid-19 Data Exploratory Project</h3>
+            <p>Performed an exploratory analysis of global and South African Covid-19 case counts, deaths and infection rates, including the dates of first recorded cases and deaths.</p>
+            <div class="tag-list">
+              <span class="tag">Microsoft Excel</span><span class="tag">Power Query</span><span class="tag">SQL Server</span>
+            </div>
+            <a href="https://github.com/PacificNt/Covid-19_Data_Exploratory_Project/blob/main/README.md" target="_blank" rel="noopener" class="read-more">View Project <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <img src="assets/images/Bike Sale Project.png" alt="Bike Sales Excel Dashboard preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Bike Sales Excel Project &ndash; Interactive Dashboard</h3>
+            <p>Created an interactive Excel dashboard tracking supplier performance metrics and lead times across 5 regions.</p>
+            <div class="tag-list">
+              <span class="tag">Excel</span><span class="tag">Pivot Table</span>
+            </div>
+            <a href="https://1drv.ms/x/s!Akip1je-1QNHhXFHYk6BNHIUwfp4?e=jDx7t6" target="_blank" rel="noopener" class="read-more">View Dashboard <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-reveal data-category="data-analytics">
+          <div class="portfolio-thumb">
+            <img src="assets/images/Adventure Preview.png" alt="Maven Adventure Sales Project preview" loading="lazy">
+          </div>
+          <div class="portfolio-body">
+            <h3>Maven Adventure Sales Project</h3>
+            <p>Generated dashboards to track KPIs, compare regional performance, analyze product-level trends, and identify high-value customers.</p>
+            <div class="tag-list">
+              <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span>
+            </div>
+            <a href="https://mavenshowcase.com/project/29545" target="_blank" rel="noopener" class="read-more">View Dashboard <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="back-link-wrap"><a href="index.html#portfolio" class="back-link"><span class="arrow arrow-left" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg></span> Back to Featured Projects</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="index.html#home" class="logo">P<span>N</span></a>
+      <p>Pacifique Nteta &mdash; Data Engineer &amp; Analyst bridging industrial engineering and data analytics.</p>
+      <ul class="social-round">
+        <li><a href="https://linkedin.com/in/pacifique-nteta" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.7c0-1.36-.02-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3v5.8h-4V9z"/></svg></a></li>
+        <li><a href="https://github.com/PacifiqueNteta" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a></li>
+        <li><a href="https://wa.me/27622520309" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.36A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12.05l.5 1.83-1.87-.49A8 8 0 1 1 12 4zm-3.24 4.1c-.2 0-.5.06-.77.36-.26.3-1 1-1 2.42 0 1.43 1.03 2.8 1.17 3 .15.2 2 3.14 4.9 4.28 2.42.95 2.9.76 3.43.71.53-.05 1.7-.7 1.94-1.36.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.35-.3-.15-1.7-.84-1.97-.94-.26-.1-.46-.15-.65.15-.2.3-.75.94-.92 1.14-.17.2-.34.22-.63.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.58-.9-2.16-.24-.57-.48-.5-.65-.5z"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>What I Offer</h4>
+      <ul class="footer-links">
+        <li><a href="index.html#services"><span>&rarr;</span> Data Engineering</a></li>
+        <li><a href="index.html#services"><span>&rarr;</span> BI &amp; Dashboards</a></li>
+        <li><a href="index.html#services"><span>&rarr;</span> Process Optimization</a></li>
+        <li><a href="projects.html"><span>&rarr;</span> All Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Have a Question?</h4>
+      <ul class="footer-contact">
+        <li><span class="ic-pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.75"/></svg></span>
+          <span>Pretoria, South Africa</span></li>
+        <li><span class="ic-phone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h3.4l1.6 4.4-2 1.6a12.5 12.5 0 0 0 6.5 6.5l1.6-2 4.4 1.6v3.4c0 1-.8 1.5-1.7 1.4C10.6 20 4 13.4 3.1 5.7 3 4.8 3.5 4 4.5 4Z"/></svg></span>
+          <a href="tel:+27622520309" target="_blank" rel="noopener noreferrer">+27 62 252 0309</a></li>
+        <li><span class="ic-mail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6 8-6"/></svg></span>
+          <a href="mailto:pacific.nteta@gmail.com" target="_blank" rel="noopener noreferrer">pacific.nteta@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright &copy; <span id="year"></span> Pacifique Nteta. All rights reserved.</p>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">
+  <svg class="progress-ring" viewBox="0 0 48 48" aria-hidden="true">
+    <circle class="progress-ring__bg" cx="24" cy="24" r="21"></circle>
+    <circle class="progress-ring__fg" id="scrollProgressCircle" cx="24" cy="24" r="21"></circle>
+  </svg>
+  <svg class="up-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
     <script>
         // Filter projects by category
         document.addEventListener('DOMContentLoaded', function() {
@@ -338,8 +333,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
