@@ -1,0 +1,164 @@
+
+<canvas id="c" style="display:block;width:100%;height:520px;"></canvas>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+  canvas.width = canvas.offsetWidth * devicePixelRatio;
+  canvas.height = canvas.offsetHeight * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+}
+resize();
+window.addEventListener('resize', resize);
+
+const isDark = () => document.documentElement.classList.contains('dark') ||
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const COLORS = {
+  light: { bg: 'transparent', node: ['#185FA5','#0F6E56','#534AB7','#993C1D','#3B6D11'], edge: 'rgba(24,95,165,0.15)', pulse: '#378ADD' },
+  dark:  { bg: 'transparent', node: ['#85B7EB','#5DCAA5','#AFA9EC','#F0997B','#97C459'], edge: 'rgba(133,183,235,0.12)', pulse: '#85B7EB' }
+};
+
+const W = () => canvas.offsetWidth;
+const H = () => canvas.offsetHeight;
+
+const NODE_COUNT = 42;
+const MAX_DIST = 160;
+
+let nodes = [];
+let pulses = [];
+let mouse = { x: -9999, y: -9999 };
+
+function randColor(dark) {
+  const c = dark ? COLORS.dark.node : COLORS.light.node;
+  return c[Math.floor(Math.random() * c.length)];
+}
+
+function initNodes() {
+  nodes = Array.from({ length: NODE_COUNT }, () => ({
+    x: Math.random() * W(),
+    y: Math.random() * H(),
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5,
+    r: 3 + Math.random() * 3.5,
+    color: randColor(isDark()),
+    alpha: 0.7 + Math.random() * 0.3,
+  }));
+}
+
+function spawnPulse() {
+  const a = Math.floor(Math.random() * nodes.length);
+  let b;
+  do { b = Math.floor(Math.random() * nodes.length); } while (b === a);
+  const na = nodes[a], nb = nodes[b];
+  const dist = Math.hypot(na.x - nb.x, na.y - nb.y);
+  if (dist < MAX_DIST) {
+    pulses.push({ a, b, t: 0, color: na.color });
+  }
+}
+
+initNodes();
+setInterval(spawnPulse, 600);
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
+});
+canvas.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+function draw() {
+  const w = W(), h = H();
+  const dark = isDark();
+  const palette = dark ? COLORS.dark : COLORS.light;
+
+  ctx.clearRect(0, 0, w, h);
+
+  // Update & wrap nodes
+  nodes.forEach(n => {
+    n.x += n.vx; n.y += n.vy;
+    if (n.x < -10) n.x = w + 10;
+    if (n.x > w + 10) n.x = -10;
+    if (n.y < -10) n.y = h + 10;
+    if (n.y > h + 10) n.y = -10;
+    // mouse repel
+    const dx = n.x - mouse.x, dy = n.y - mouse.y;
+    const d = Math.hypot(dx, dy);
+    if (d < 80 && d > 0) {
+      const f = (80 - d) / 80 * 0.4;
+      n.vx += dx / d * f;
+      n.vy += dy / d * f;
+    }
+    // damping
+    n.vx *= 0.98; n.vy *= 0.98;
+    // clamp
+    const sp = Math.hypot(n.vx, n.vy);
+    if (sp > 1.5) { n.vx = n.vx / sp * 1.5; n.vy = n.vy / sp * 1.5; }
+  });
+
+  // Draw edges
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const na = nodes[i], nb = nodes[j];
+      const d = Math.hypot(na.x - nb.x, na.y - nb.y);
+      if (d < MAX_DIST) {
+        const alpha = (1 - d / MAX_DIST) * 0.35;
+        ctx.beginPath();
+        ctx.strokeStyle = dark
+          ? `rgba(133,183,235,${alpha})`
+          : `rgba(24,95,165,${alpha})`;
+        ctx.lineWidth = 0.8;
+        ctx.moveTo(na.x, na.y);
+        ctx.lineTo(nb.x, nb.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Draw pulses
+  pulses = pulses.filter(p => p.t <= 1);
+  pulses.forEach(p => {
+    p.t += 0.018;
+    const na = nodes[p.a], nb = nodes[p.b];
+    const px = na.x + (nb.x - na.x) * p.t;
+    const py = na.y + (nb.y - na.y) * p.t;
+    const fade = Math.sin(p.t * Math.PI);
+    ctx.beginPath();
+    ctx.arc(px, py, 3.5, 0, Math.PI * 2);
+    ctx.fillStyle = p.color + Math.round(fade * 220).toString(16).padStart(2,'0');
+    ctx.fill();
+    // glow ring
+    ctx.beginPath();
+    ctx.arc(px, py, 6, 0, Math.PI * 2);
+    ctx.strokeStyle = p.color + Math.round(fade * 100).toString(16).padStart(2,'0');
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+
+  // Draw nodes
+  nodes.forEach(n => {
+    // halo on mouse-near
+    const md = Math.hypot(n.x - mouse.x, n.y - mouse.y);
+    if (md < 100) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r + 5, 0, Math.PI * 2);
+      ctx.fillStyle = n.color + '28';
+      ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = n.color + Math.round(n.alpha * 255).toString(16).padStart(2,'0');
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.strokeStyle = n.color + 'cc';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
