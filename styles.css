@@ -281,16 +281,16 @@ section{ position: relative; }
 .hero-inner{
   position: relative;
   display: grid;
-  grid-template-columns: 1.08fr .80fr;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .80fr);
   align-items: flex-end;
   gap: 30px;
   min-height: calc(100vh - var(--header-h));
   padding-top: 40px;
   max-width: 100%;        
   margin-left: 0;         
-  padding-left: 150px; 
+  padding-left: 40px; 
 }
-.hero-content{ padding-bottom: 60px; max-width: 620px; position: relative; z-index: 2; }
+.hero-content{ padding-bottom: 60px; max-width: 620px; position: relative; min-width: 0; z-index: 2; }
 .chat-badge{
   position: relative;
   display: inline-block;
@@ -314,10 +314,19 @@ section{ position: relative; }
   font-weight: 700;
   margin-bottom: 22px;
 }
-.hero-typewriter{ display: inline-block; white-space: nowrap; min-height: 1.25em; }
+@media (max-width: 620px){
+  .hero-title{ font-size: clamp(1.45rem, 7.5vw, 2rem); }
+  .hero-typewriter{ min-height: 3.9em; }   /* 3 lines of headroom on very narrow screens */
+  .hero-text{ font-size: .98rem; }
+  .hero-content{ padding-left: 4px; padding-right: 4px; }
+}
+.hero-typewriter{ display: block; min-height: 1.3em;overflow-wrap: break-word; }
+@media (max-width: 1080px){
+  .hero-typewriter{ min-height: 2.6em; }  /* reserves 2 lines — no vertical jump when it wraps */
+}
 .cursor{ display: inline-block; animation: blink 1s step-end infinite; font-weight: 300; }
 @keyframes blink{ 50%{ opacity: 0; } }
-.hero-text{ color: rgba(255,255,255,.9); font-size: 1.05rem; max-width: 520px; }
+.hero-text{ color: rgba(255,255,255,.9); font-size: 1.05rem;width: 100%; max-width: 520px; }
 .hero-buttons{ display: flex; gap: 16px; margin: 28px 0 30px; flex-wrap: wrap; }
 .hero-socials{ display: flex; gap: 26px; flex-wrap: wrap; }
 .hero-socials a{
@@ -348,6 +357,8 @@ section{ position: relative; }
 .about-image{ position: relative; }
 .about-image img{
   width: 100%;
+  aspect-ratio: 4 / 5;      /* adjust to match the portrait's actual proportions */
+  object-fit: cover;
   border-radius: var(--radius-md);
   position: relative;
   z-index: 2;
@@ -628,9 +639,10 @@ section{ position: relative; }
 .portfolio-body p{ color: var(--gray-500); font-size: .93rem; margin-bottom: 16px; flex: 1; }
 .tag-list{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
 .tag{
-  background: var(--primary-lighter);
-  color: var(--primary-dark);
+  background: var(--white);
+  color: #353434;
   padding: 5px 12px;
+  border: 1px solid var(--gray-500);
   border-radius: 999px;
   font-size: .74rem;
   font-weight: 700;
@@ -638,20 +650,20 @@ section{ position: relative; }
 .portfolio-more{ text-align: center; margin-top: 56px; }
 
 /* Container background matching your diagram canvas */
-.portfolio-thumb {
-  background-color: #D4EAF7; /* Adjust hex to match your diagram's exact background */
+.portfolio-thumb{
+  aspect-ratio: 16 / 9;
+  background-color: #ebf0f4;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-
-/* Ensure diagrams don't clip on hover */
-.portfolio-thumb img {
+.portfolio-thumb img{
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 10px; /* Gives architecture boxes breathing room */
+  padding: 5.2px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -674,6 +686,8 @@ section{ position: relative; }
 .portfolio-item:hover .diagram-thumb img {
   transform: scale(1.02);
 }
+.portfolio-body .read-more{ color: var(--primary); }
+.portfolio-body .read-more:hover{ color: var(--dark); }
 
 /* ---------- 11. Platforms & Tools (logo marquee) ---------- */
 .platforms { 
@@ -1055,6 +1069,8 @@ section{ position: relative; }
 .back-link-wrap a:hover{ text-decoration: underline; }
 
 /* ---------- 19. Responsive ---------- */
+
+
 @media (max-width: 1080px){
   .about-inner, .contact-inner{ grid-template-columns: 1fr; gap: 50px; }
   .about-image{ max-width: 460px; margin: 0 auto; }
